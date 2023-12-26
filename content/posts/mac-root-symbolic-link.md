@@ -1,5 +1,5 @@
 ---
-title: "Placeholder 줄바꿈 적용하기"
+title: "MAC 루트 경로에 폴더 만들기"
 date: 2023-12-26 14:26:00+09:00
 categories: mac symbolic link
 ---
