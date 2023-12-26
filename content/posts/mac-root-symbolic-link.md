@@ -4,7 +4,7 @@ date: 2023-12-26 14:26:00+09:00
 categories: mac symbolic link
 ---
 
-> 🙋🏻‍♂️: mac 환경에서도 Root에 LOGS 폴더를 만들어주세요.
+> 🙋🏻‍♂️: mac 환경에서도 Root에 LOGS 폴더를 만들어주세요.  
 > 👨🏻‍💻: mkdir LOGS 하면 되겠지?
 
 <img src='images/mac/root-symbolic-link.png'/>
