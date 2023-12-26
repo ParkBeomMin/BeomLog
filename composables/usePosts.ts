@@ -58,7 +58,9 @@ export const usePosts = () => {
         .limit(limit)
         .find();
     });
-    postState.value.postList = data.value.map((post: any) => ({
+    console.log("data", data);
+
+    postState.value.postList = (data.value as any).map((post: any) => ({
       title: post.title,
       description: post.description,
       categories: post.categories,
