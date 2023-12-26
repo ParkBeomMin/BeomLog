@@ -1,37 +1,40 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-    devtools: { enabled: true },
-    modules: [
-        '@nuxt/content',
-        '@nuxtjs/tailwindcss',
-        'nuxt-gtag',
-        [
-            '@nuxtjs/google-adsense',
-            {
-                id: '',
-            },
-        ],
+  app: {
+    baseURL: "/BeomLog/",
+  },
+  devtools: { enabled: true },
+  modules: [
+    "@nuxt/content",
+    "@nuxtjs/tailwindcss",
+    "nuxt-gtag",
+    [
+      "@nuxtjs/google-adsense",
+      {
+        id: "",
+      },
     ],
-    content: {
-        highlight: {
-            theme: 'github-light',
-        },
-        documentDriven: true,
-        experimental: {
-            clientDB: true,
-            stripQueryParameters: false,
-        },
+  ],
+  content: {
+    highlight: {
+      theme: "github-light",
     },
-
-    nitro: {
-        prerender: {
-            routes: ['/sitemap.xml'],
-        },
+    documentDriven: true,
+    experimental: {
+      clientDB: true,
+      stripQueryParameters: false,
     },
+  },
 
-    gtag: {
-        id: 'G-44YWDK9DBE',
+  nitro: {
+    prerender: {
+      routes: ["/sitemap.xml"],
     },
+  },
 
-    sourcemap: false,
+  gtag: {
+    id: "G-44YWDK9DBE",
+  },
+
+  sourcemap: false,
 });
