@@ -42,31 +42,29 @@ export const usePosts = () => {
   const getPostList = async ({ limit = 0 }: { limit?: number } = {}) => {
     // console.log("getPost!", limit);
 
-    postState.value.postList =
-      // await useAsyncData(`posts-${actualPath}`, async () => {
-      //return
-      (
-        await useAsyncData("posts", async () => {
-          await queryContent("/posts/")
-            .where({
-              title: {
-                $contains: [postState.value.keyword],
-              },
-              categories: {
-                $contains: [...postState.value.categories],
-              },
-            })
-            .sort({ date: -1 })
-            .limit(limit)
-            .find();
+    // await useAsyncData(`posts-${actualPath}`, async () => {
+    //return
+    const { data } = await useAsyncData("posts", async () => {
+      return await queryContent("/posts/")
+        .where({
+          title: {
+            $contains: [postState.value.keyword],
+          },
+          categories: {
+            $contains: [...postState.value.categories],
+          },
         })
-      ).map((post: any) => ({
-        title: post.title,
-        description: post.description,
-        categories: post.categories,
-        date: post.date,
-        _path: post._path,
-      }));
+        .sort({ date: -1 })
+        .limit(limit)
+        .find();
+    });
+    postState.value.postList = data.value.map((post: any) => ({
+      title: post.title,
+      description: post.description,
+      categories: post.categories,
+      date: post.date,
+      _path: post._path,
+    }));
     // .sort((a: any, b: any) => {
     //     const aDate = new Date(a.date);
     //     const bDate = new Date(b.date);
