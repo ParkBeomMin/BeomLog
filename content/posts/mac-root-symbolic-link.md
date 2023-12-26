@@ -7,7 +7,7 @@ categories: mac symbolic link
 > 🙋🏻‍♂️: mac 환경에서도 Root에 LOGS 폴더를 만들어주세요.  
 > 👨🏻‍💻: mkdir LOGS 하면 되겠지?
 
-<img src='images/mac/root-symbolic-link.png'/>
+<img src='/images/mac/root-symbolic-link.png'/>
 
 mac Catalina부터는 보안상의 이유로 루트경로에 디렉토리를 만들 수가 없습니다..
 
