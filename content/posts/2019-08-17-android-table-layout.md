@@ -1,10 +1,11 @@
 ---
-title: "[안드로이드] 테이블 레이아웃(TableLayout)" 
+title: "[안드로이드] 테이블 레이아웃(TableLayout)"
 date: 2019-08-17 12:19:00+09:00
 categories: android boostcourse
 toc: true
 toc_sticky: true
 ---
+
 ## 0.
 
 우리는 안드로이드에서 대표적인 레이아웃인 LinearLayout, RelativeLayout, ConstrainLayout을 활용해서 다양한 화면을 만들 수 있습니다.
@@ -23,7 +24,7 @@ toc_sticky: true
   <TableRow></TableRow>
   ...
 </TableLayout>
- ```
+```
 
  <img src="https://postfiles.pstatic.net/MjAxOTA3MjRfMTYz/MDAxNTYzOTQ2NTQwMzEx.ehbF-a5zKKs16GDTMRX-ea84MJ3ZGUSGXgMfvAl3Apog.GW9TPdE5JrlIrCpblZQZp4hdJsv25Hw0iUlMfbpqPIYg.PNG.club1294/image.png?type=w773">
 
@@ -67,8 +68,9 @@ TableLayout으로 전체를 감싸고 그 안에 한 행(row)이 TableRow가 됩
     </TableRow>
 
 </TableLayout>
- ```
- <img src="https://postfiles.pstatic.net/MjAxOTA3MjRfMTIg/MDAxNTYzOTQ4MzQ2OTgz.kpGUdeipNxivzCgyxPoS1cKpOMdkh0Sleaxc5C8PkaEg.4qVsZW_6C3OPvYhHr3z_J2dD32FZu50Ci-Nib2PiGLEg.PNG.club1294/image.png?type=w773">​
+```
+
+<img src="https://postfiles.pstatic.net/MjAxOTA3MjRfMTIg/MDAxNTYzOTQ4MzQ2OTgz.kpGUdeipNxivzCgyxPoS1cKpOMdkh0Sleaxc5C8PkaEg.4qVsZW_6C3OPvYhHr3z_J2dD32FZu50Ci-Nib2PiGLEg.PNG.club1294/image.png?type=w773">​
 
 ### 2.1 테이블 레이아웃 속성(TableLayout Attribute)
 
@@ -92,12 +94,13 @@ collapseColumns는 지정한 열을 없애줍니다.
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
- ```
+```
+
  <img src="https://postfiles.pstatic.net/MjAxOTA3MjRfMjc2/MDAxNTYzOTQ4NTM2ODQ3.L4yAdSkFEBu-Nunx8F6MceeCljSBBD1R2fCFA4NA6oIg.jVdPGkTBR2o-xOnD-q5hNbxTnEGH5_Ds0-TE9C7kb6Yg.PNG.club1294/image.png?type=w773">
 
 첫번째 열이 사라진 것을 볼 수 있습니다.
 ​
-속성의 값으로 여러 개의 열을 지정할 수 있습니다. 
+속성의 값으로 여러 개의 열을 지정할 수 있습니다.
 
 콤마(',')로 구분을 해줍니다.
 
@@ -107,7 +110,7 @@ collapseColumns는 지정한 열을 없애줍니다.
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
- ```
+```
 
  <img src="https://postfiles.pstatic.net/MjAxOTA3MjRfMTgy/MDAxNTYzOTQ4NjU1Mzc5.IR2DQUIuHrPbReW9LQS36EjTTahR3DsXPYkyX63YGC0g.CF7xQqP8IkbWbY0fg2buM21HSfbl3hFV9dn6s3WYkwQg.PNG.club1294/image.png?type=w773">
 
@@ -127,7 +130,7 @@ shrinkColumns의 경우 화면을 벗어날 경우 해당 인덱스를 축소시
         android:shrinkColumns="0"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
- ```
+```
 
  <img src="https://postfiles.pstatic.net/MjAxOTA3MjRfMjIg/MDAxNTYzOTQ5Mzg1NzQ4.RIseIecXDYjNMpp4-XUBIWi7fY3OdW4-Fyhzu3bPSIEg.kVrVTQbA_B1_olwpHl7rgzek99SRwACXzKMupfsMqKUg.PNG.club1294/image.png?type=w773">
 
@@ -143,13 +146,13 @@ shrinkColumns의 경우 화면을 벗어날 경우 해당 인덱스를 축소시
         android:shrinkColumns="0, 1, 2"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
- ```
+```
 
  <img src="https://postfiles.pstatic.net/MjAxOTA3MjRfNDUg/MDAxNTYzOTQ5NTIyNTkx.0qWmhodZdUmxE2J-Nt5kfqSlMwOlGsOJvyTdwZ7zJ7gg.YCX1iSWdi4a6jbX6Pn68QepqXQJJAZK8d8z2oQCYW4Yg.PNG.club1294/image.png?type=w773">
 
 지정된 인덱스에 해당되는 열이 축소된 것을 볼 수 있습니다.
 
-모든 열에 똑같이 지정하고 싶을 때는 '*'을 넣어주면 됩니다.
+모든 열에 똑같이 지정하고 싶을 때는 '\*'을 넣어주면 됩니다.
 
 ```
 <TableLayout
@@ -157,7 +160,7 @@ shrinkColumns의 경우 화면을 벗어날 경우 해당 인덱스를 축소시
         android:shrinkColumns="*"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
- ```
+```
 
  <img src="https://postfiles.pstatic.net/MjAxOTA3MjRfMTUz/MDAxNTYzOTQ5NjMwNTcz.4UXgUuUkOjtG-KfG83DIqqAp4NtpegzihPfrjLI5cdQg.pU0qQ7Uu0qSrH6cCtz4HsofVO1VsEjoUDEZxGKpxAQ8g.PNG.club1294/image.png?type=w773">
 
@@ -175,15 +178,15 @@ stretchColumns는 지정한 열을 늘려줍니다.
         android:stretchColumns="0"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
- ```
- 
+```
+
  <img src="https://postfiles.pstatic.net/MjAxOTA3MjRfODAg/MDAxNTYzOTQ5OTQ5Nzk0.PNfjklwvoGkftBdZ6bm6bs85VILeEssOoY-0nBMXZfMg.feQI33Fh6DG97hLt1VimQK-86gMlx1cu82N71ImXVK4g.PNG.club1294/image.png?type=w773">
 
 해당하는 열이 화면에 맞게 늘어나는 것을 볼 수 있습니다.
 
-다른 속성과 마찬가지로 여러 개의 열을 지정할 수 있고, 
+다른 속성과 마찬가지로 여러 개의 열을 지정할 수 있고,
 
-shrink 속성과 마찬가지로 모든 열에 지정하고 싶을 때는 '*'을 넣어줍니다.
+shrink 속성과 마찬가지로 모든 열에 지정하고 싶을 때는 '\*'을 넣어줍니다.
 
 ```
 <TableLayout
@@ -191,7 +194,7 @@ shrink 속성과 마찬가지로 모든 열에 지정하고 싶을 때는 '*'을
         android:stretchColumns="*"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
- ```
+```
 
  <img src="https://postfiles.pstatic.net/MjAxOTA3MjRfMzgg/MDAxNTYzOTUwMDc1ODkz.m9dw-WoF1iQav72IFYIjFhd4BKwAwAdp5MZfUHFVh8Yg.qiey47SEiGhbDAjmhShbZz47Lgkpay_cQLLKeKL7zFUg.PNG.club1294/image.png?type=w773">
 
@@ -216,12 +219,11 @@ layout_column의 값은 마찬가지로 열(column)의 인덱스 값이고 해�
                 android:text="2"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"/>
- ```
+```
 
  <img src="https://postfiles.pstatic.net/MjAxOTA3MjRfMjEw/MDAxNTYzOTUwNzQwNTQ3.z8Gr-Mb7bvtQLl3mN2n2zAJgtxpYMWBRpdJxop3OltUg.QC_kM58DRn177w2UMcOKHA1Pj2nnRcL1YWOro0UBXpMg.PNG.club1294/image.png?type=w773">
 
 2열에 있던 2번 버튼이 3열로 잘 옮겨졌습니다.
-
 
 그러면 1번 버튼을 2열(1번 인덱스)로 옮기고, 2번 버튼을 1열(0번 인덱스)로 지정을 해보겠습니다.
 
@@ -236,7 +238,7 @@ layout_column의 값은 마찬가지로 열(column)의 인덱스 값이고 해�
                 android:text="2"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"/>
- ```
+```
 
 <img src ="https://postfiles.pstatic.net/MjAxOTA3MjRfMjI0/MDAxNTYzOTU3NjM0ODgw.qmmUifiJs3So_RJotioio4ugRfrv7G_VM6I2x-DbjzEg.d7cDKaAAS0AX0DwSg5fQgyM8eDYaYYb7TZIUO39vOHsg.PNG.club1294/image.png?type=w773">
 
@@ -261,4 +263,4 @@ A) 유지 보수에 더 불편함이 많을 것 같다.
 
 [#부스트코스][ref-url-1]
 
-[ref-url-1]: "https://www.edwith.org/boostcourse-android/lecture/17050/"
+<!-- [ref-url-1]: "https://www.edwith.org/boostcourse-android/lecture/17050/" -->
