@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   app: {
     baseURL: "/BeomLog/",
-  },
+  }, //
   devtools: { enabled: true },
   modules: [
     "@nuxt/content",
