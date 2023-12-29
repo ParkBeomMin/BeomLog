@@ -53,7 +53,7 @@ const randomPlaceholder = computed(() => {
 // });
 
 const getPostList_ = async () => {
-  await useAsyncData("posts", async () => {
+  await useAsyncData("posts_", async () => {
     await getPostList();
   });
 };
