@@ -47,14 +47,14 @@ export const usePosts = () => {
       //return
       (
         await queryContent("/posts/")
-          .where({
-            title: {
-              $contains: [postState.value.keyword],
-            },
-            categories: {
-              $contains: [...postState.value.categories],
-            },
-          })
+          // .where({
+          //   title: {
+          //     $contains: [postState.value.keyword],
+          //   },
+          //   categories: {
+          //     $contains: [...postState.value.categories],
+          //   },
+          // })
           .sort({ date: -1 })
           .limit(limit)
           .find()
@@ -74,6 +74,25 @@ export const usePosts = () => {
     // console.log(postState.value.postList);
 
     // postState.value.postList = data.value as any;
+
+    if (!!postState.value.keyword) {
+      console.log(postState.value.keyword);
+
+      postState.value.postList = [...postState.value.postList].filter((post) =>
+        post.title.includes(postState.value.keyword)
+      );
+    }
+
+    if (postState.value.categories.length > 0) {
+      console.log(postState.value.categories);
+
+      postState.value.postList = [...postState.value.postList].filter(
+        (post) =>
+          post.categories
+            .split(" ")
+            .filter((c) => postState.value.categories.includes(c)).length > 0
+      );
+    }
   };
 
   return { postState, getPostList, setCategory, resetFilter };

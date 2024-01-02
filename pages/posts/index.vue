@@ -6,7 +6,7 @@
     type="search"
     :placeholder="randomPlaceholder"
     v-model="postState.keyword"
-    @onClick="getPostList_"
+    @onClick="getPostList"
   />
   <KakaoBannerLong />
   <CategoryFilter class="mt-8" />
@@ -51,10 +51,4 @@ const randomPlaceholder = computed(() => {
 //         resetFilter();
 //     }
 // });
-
-const getPostList_ = async () => {
-  await useAsyncData("posts_", async () => {
-    await getPostList();
-  });
-};
 </script>
