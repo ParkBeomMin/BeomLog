@@ -6,7 +6,7 @@ thumbnail: /images/mac/nginx.png
 description: Mac에 nginx를 설치해보자.
 ---
 
-> 🙋🏻‍♂️: MAC pro 14 / M2 / Ventura 13.5 / Homebrew 4.2.2
+> 🙋🏻‍♂️: MAC pro 14 / M2 / Ventura 13.5 / Homebrew 4.2.2  
 > 👨🏻‍💻: Mac에 nginx를 설치해보자!
 
 <img src="/images/mac/nginx.png" />
