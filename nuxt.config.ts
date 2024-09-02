@@ -8,12 +8,6 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@nuxtjs/tailwindcss",
     "nuxt-gtag",
-    [
-      "@nuxtjs/google-adsense",
-      {
-        id: "",
-      },
-    ],
   ],
   content: {
     highlight: {
@@ -30,7 +24,7 @@ export default defineNuxtConfig({
     prerender: {
       routes: ["/sitemap.xml"],
       ignore: ["/posts/*"],
-      failOnErrors: false,
+      failOnError: false,
     },
   },
 
